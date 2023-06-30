@@ -1,14 +1,20 @@
-Nest.js is a progressive Node.js framework used for building efficient, scalable, and maintainable server-side applications. It combines elements of Object-Oriented Programming (OOP), Functional Programming (FP), and Functional Reactive Programming (FRP) to provide a robust development experience. Here's an overview of Nest.js, including its features, capabilities, technologies, uses, advantages, and disadvantages:
+Nest.js is a progressive Node.js framework used for building efficient, scalable, and maintainable server-side applications. 
+  It combines elements of Object-Oriented Programming (OOP), Functional Programming (FP), and
+  Functional Reactive Programming (FRP) to provide a robust development experience.
+    Heres an overview of Nest.js, including its features, capabilities, technologies, uses, advantages, and disadvantages:
 
 Features of Nest.js:
 
 TypeScript: Nest.js is built with TypeScript, which brings static typing, enhanced tooling, and better code organization to Node.js development.
 
-Modular Architecture: Nest.js promotes a modular architecture that helps organize code into modules, making it easier to manage and scale applications. Modules encapsulate related functionality, such as controllers, services, and providers.
+Modular Architecture: Nest.js promotes a modular architecture that helps organize code into modules, making it easier to manage and scale applications.
+  Modules encapsulate related functionality, such as controllers, services, and providers.
 
-Dependency Injection: Nest.js uses dependency injection to manage dependencies between components. This allows for loose coupling, improved testability, and better code reusability.
+Dependency Injection: Nest.js uses dependency injection to manage dependencies between components. This allows for loose coupling, improved testability, 
+  and better code reusability.
 
-Decorators and Metadata: Nest.js leverages decorators and metadata to define and configure various components, such as controllers, services, and middleware. This makes it easy to define routes, validation rules, and other aspects of application behavior.
+Decorators and Metadata: Nest.js leverages decorators and metadata to define and configure various components, such as controllers, services, and middleware.
+  This makes it easy to define routes, validation rules, and other aspects of application behavior.
 
 Middleware Support: Nest.js provides middleware support, allowing you to define global and route-specific middleware functions to handle requests and perform common tasks such as authentication, logging, and error handling.
 
