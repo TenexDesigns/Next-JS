@@ -23,6 +23,31 @@ For nested dynamic routes, you can create a directory with square brackets and p
 Catch all routes can be defined by using three dots (...) inside the square brackets. For example, a file at pages/posts/[...id].js would match any route like /posts/a, /posts/a/b, /posts/a/b/c, etc. The parts of the URL after /posts/ will be passed as an array to your page reacthustle.com.
 
 
+  Catch all Routes Example
+
+import { useRouter } from "next/router"
+
+
+
+function DocsPage() {
+  const {params =[]} = useRouter().query
+  console.log(params)
+
+  if(params.length ===2){
+    return <h1> Viewing Dos for reature {params[0]} and concept {params[1]}</h1>
+
+  }else if (params.length ===1){
+    return <h1> Viwinng Docs for feature {params[0]}</h1>
+  }
+
+ 
+  return <h1> Docs for Home Page</h1>
+
+}
+
+export default DocsPage
+
+
 
 
 
