@@ -36,7 +36,7 @@ So every app is alrady staticlay generated when we build it.
 
 
 
-
+Staticaly Generate Pages -After Fetching Some Data
 
 
 
