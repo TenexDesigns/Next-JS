@@ -39,4 +39,84 @@ Finally, the retrieved users array is mapped over, and for each user, a <div> el
 
 Remember to replace the API endpoint (https://api.example.com/users) with the actual endpoint you are using to fetch the data.
 
+
+
+
+
+MORE EXPLANANTION
+*******************************************************************************************
+
+  To statically display and fetch data in a Next.js component, you can use the getStaticProps function. This function lets you fetch data at build time and pass it as props to your component. Here is an example:
+
+export async function getStaticProps() {
+  const res = await fetch('https://api.example.com/products')
+  const products = await res.json()
+
+  return {
+    props: {
+      products,
+    },
+  }
+}
+
+export default function Products({ products }) {
+  return (
+    <div>
+      <h1>Products</h1>
+      {products.map((product) => (
+        <div key={product.id}>{product.name}</div>
+      ))}
+    </div>
+  )
+}
+In this example, the getStaticProps function fetches data from an API at build time and passes it to the Products component as a prop.
+  The Products component then renders the data. spacejelly.dev
+
+If you want to fetch data at request time instead of at build time, you can use the getServerSideProps function. Here is an example:
+
+export async function getServerSideProps() {
+  const res = await fetch('https://api.example.com/products')
+  const products = await res.json()
+
+  return {
+    props: {
+      products,
+    },
+  }
+}
+
+export default function Products({ products }) {
+  return (
+    <div>
+      <h1>Products</h1>
+      {products.map((product) => (
+        <div key={product.id}>{product.name}</div>
+      ))}
+    </div>
+  )
+}
+In this example, the getServerSideProps function fetches data from an API each time the page is requested and passes it to the Products component as a prop.
+  The Products component then renders the data. spacejelly.dev
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                                       
