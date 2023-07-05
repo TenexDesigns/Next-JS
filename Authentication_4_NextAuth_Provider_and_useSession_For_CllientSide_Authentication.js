@@ -17,7 +17,7 @@ export default function App({ Component, pageProps }) {
 In this example, the Provider component is wrapping the entire application, so any component in the application can use the useSession hook
   to access the session state.
 
-The useSession hook can be used to check if someone is signed in. Here's an example:
+The useSession hook can be used to check if someone is signed in. Heres an example:
 
 import { useSession } from 'next-auth/react'
 
