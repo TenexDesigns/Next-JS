@@ -2,7 +2,7 @@ Sure, the callbackUrl is a parameter that can be used to specify a URL to redire
 
 In the context of your code, the callbackUrl is appended as a query parameter to the destination URL in the redirect object. If the user is not authenticated, they are redirected to the destination URL, which is the sign-in page. After they sign in, they are then redirected to the callbackUrl.
 
-Here's your modified code:
+Heres your modified code:
 
 import { getServerSession } from 'next-auth/react'
 
