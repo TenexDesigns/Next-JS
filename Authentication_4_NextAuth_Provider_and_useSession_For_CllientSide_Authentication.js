@@ -48,14 +48,16 @@ FOLLOW UP QUESTION-----> Other items of useSession object , when it iis destruct
 *********************************************************************8*********************************************************************8
 
 
-Yes, the useSession hook from next-auth/react does return an object with more properties aside from data (which contains the session data). The other properties are status and update.
+Yes, the useSession hook from next-auth/react does return an object with more properties aside from data (which contains the session data). 
+  The other properties are status and update.
 
-The status property can have one of three values: 'loading', 'authenticated', or 'unauthenticated'. This is used to indicate the current state of the session:
+The status property can have one of three values: 'loading', 'authenticated', or 'unauthenticated'.
+  This is used to indicate the current state of the session:
 
 'loading': The session state is being updated, for example when session data is being fetched.
 'authenticated': The user is currently signed in.
 'unauthenticated': The user is currently not signed in.
-Here's an example of how you can use status:
+Heres an example of how you can use status:
 
 import { useSession } from 'next-auth/react'
 
@@ -70,9 +72,11 @@ export default function Component() {
     return <a href="/api/auth/signin">Sign in</a>
   }
 }
-In this example, while the session state is being updated, a loading message is displayed. Once the session state is updated, the component either displays a message indicating that the user is signed in, or a sign-in link if the user is not signed in.
+In this example, while the session state is being updated, a loading message is displayed.
+  Once the session state is updated, the component either displays a message indicating that the user is signed in, or a sign-in link if the user is not signed in.
 
-The update property is a function that you can use to manually trigger an update of the session data. This is useful if you have updated the session data on the server and want to update the session data on the client without reloading the page next-auth.js.org, stackoverflow.com.
+The update property is a function that you can use to manually trigger an update of the session data. 
+  This is useful if you have updated the session data on the server and want to update the session data on the client without reloading the page next-auth.js.org, stackoverflow.com.
 
 
 
