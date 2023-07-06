@@ -70,6 +70,41 @@ You need to use the direct image URL (usually ending in .jpg, .png, etc.) for th
 
 
 
+    
+WORKING WITH IMAGES -PRIORITY IN IMAGES
+********************************************************************************************8
+
+
+The warning message youre seeing is suggesting you to add a priority attribute to your Image component from next/image. This attribute is used to load the image eagerly (as opposed to lazily) and is recommended for above-the-fold images (images that appear without scrolling down the page). This can help improve your Largest Contentful Paint (LCP) score, which is a Core Web Vitals metric that measures loading performance geeksforgeeks.org.
+
+To use the priority attribute, you need to modify your Card component to use the next/image component for image rendering:
+
+// components/Card.js
+import Image from 'next/image';
+
+const Card = ({ title, imageUrl, description }) => {
+  return (
+    <div className="max-w-sm rounded overflow-hidden shadow-lg m-2">
+      <Image 
+        src={imageUrl} 
+        alt={title} 
+        layout="responsive" 
+        width={500} 
+        height={300} 
+        priority  // Add this line
+      />
+      <div className="px-6 py-4">
+        <div className="font-bold text-xl mb-2">{title}</div>
+        <p className="text-gray-700 text-base">{description}</p>
+      </div>
+    </div>
+  );
+};
+
+export default Card;
+In this code, layout="responsive" allows the image to scale with the parent element, and width and height are required props for next/image. The priority prop is added to load the image eagerly.
+
+Please note that you should only use priority for images that are in the viewport at the start (above-the-fold images). For images that appear after scrolling, it's recommended to load them lazily (without the priority attribute) to improve performance medium.com.
 
 
 
