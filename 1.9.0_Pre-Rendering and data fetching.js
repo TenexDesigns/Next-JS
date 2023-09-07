@@ -22,10 +22,13 @@
 
 1.What is Pre-rendering?
   Pre-rendering is the process of generating static HTML pages for your website or application during the build process, before they are served to the client.
-Pre-rendering is a feature in Next.js where a page is generated at build time (static generation) or on each request (server-side rendering). Instead of rendering everything from scratch in the browser, Next.js can serve pre-rendered HTML, improving performance and SEO (nextjs.org).
+Pre-rendering is a feature in Next.js where a page is generated at build time (static generation) or on each request (server-side rendering). 
+  Instead of rendering everything from scratch in the browser, Next.js can serve pre-rendered HTML, improving performance and SEO (nextjs.org).
 
 2.Why is Pre-rendering Important?
-Pre-rendering is important because it improves accessibility, performance and SEO. By pre-rendering pages, you can serve static HTML files that load faster than JavaScript-rendered pages. This approach also ensures that your page content is visible to search engines, which can help improve your site's visibility in search results.
+Pre-rendering is important because it improves accessibility, performance and SEO. By pre-rendering pages, you can serve static HTML files that load faster than 
+  JavaScript-rendered pages. This approach also ensures that your page content is visible to search engines, which can help improve your sites 
+    visibility in search results.
 Pre-rendering is important for improved performance, better SEO, and accessibility.
   
 3.Types of Prerendering
@@ -35,7 +38,9 @@ Next.js supports two types of pre-rendering:
 
                                                  
 (A)WHat is Staic Generation
-Static Generation is a pre-rendering method in Next.js where HTML pages are generated at build time. These pages are then served statically to the client without the need for server-side processing on each request. Static Generation is suitable for pages with data that does not change frequently.
+Static Generation is a pre-rendering method in Next.js where HTML pages are generated at build time. 
+  These pages are then served statically to the client without the need for server-side processing on each request.
+    Static Generation is suitable for pages with data that does not change frequently.
                        Key Points
   ------------------------------------------------------------------------
    -   Pages are pre-rendered at build time, and the generated HTML is saved as static files.
@@ -45,9 +50,13 @@ Static Generation is a pre-rendering method in Next.js where HTML pages are gene
    -   Next.js provides features like incremental Static Generation, where you can specify a revalidation interval to update the static pages periodically.
 
 (B)Server-side Rendering (SSR):
-Server-side Rendering (SSR) is a method of pre-rendering where the page is generated on each request. This means that the server generates the HTML for each page on every request.
-SSR is ideal for pages where the data changes frequently and needs to be up-to-date for each request. Because the pages are generated on each request, the data on the pages is always fresh 
-Server-side Rendering is another pre-rendering method in Next.js where pages are rendered on each request on the server-side. This means that the server dynamically generates the HTML for each request, including any data fetching or processing required. SSR is suitable for pages with data that frequently changes or needs to be personalized per request.
+Server-side Rendering (SSR) is a method of pre-rendering where the page is generated on each request.
+  This means that the server generates the HTML for each page on every request.
+SSR is ideal for pages where the data changes frequently and needs to be up-to-date for each request.
+  Because the pages are generated on each request, the data on the pages is always fresh 
+Server-side Rendering is another pre-rendering method in Next.js where pages are rendered on each request on the server-side. 
+  This means that the server dynamically generates the HTML for each request, including any data fetching or processing required. SSR
+  is suitable for pages with data that frequently changes or needs to be personalized per request.
                       Key Points
   ------------------------------------------------------------------------
    -   Pages are rendered on the server for each request and the HTML is sent to the client.
