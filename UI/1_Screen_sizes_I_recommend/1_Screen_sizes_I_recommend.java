@@ -1,3 +1,6 @@
+But you can use the md, lg and 2xl to design for phones( 0- 760) tablets(760-1280) and laptops (1280-1536) ,desktops (1536 and up) in the normal tailwind configuration 
+
+
 To customize your Tailwind CSS configuration to use specific screen sizes like "320px" for phones, "760px" for tablets, "1280px" for laptops, and "1536px" for desktops, you can modify the `theme` section of your `tailwind.config.js` file. Here's how you can define custom screen sizes in your configuration:
 
 ```javascript
