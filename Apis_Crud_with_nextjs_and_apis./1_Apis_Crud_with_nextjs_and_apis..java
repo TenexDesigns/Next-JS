@@ -1,4 +1,5 @@
-To handle Create, Read, Update, and Delete (CRUD) operations in a Next.js and Tailwind CSS app from an API, you can use Next.js's API routes feature and JavaScript's built-in fetch function. Here's a basic guide on how to implement each operation.
+To handle Create, Read, Update, and Delete (CRUD) operations in a Next.js and Tailwind CSS app from an API, you can use Next.js's
+    API routes feature and JavaScript's built-in fetch function. Here's a basic guide on how to implement each operation.
 
 1.Create: To create data, you can make a POST request to the appropriate API endpoint.
 async function createData(data) {
