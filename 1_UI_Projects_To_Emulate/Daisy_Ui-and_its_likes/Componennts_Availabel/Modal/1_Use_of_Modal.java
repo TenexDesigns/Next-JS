@@ -1,4 +1,5 @@
-In a Next.js application, you can use the DaisyUI Modal component to create a modal dialog with an input and a submit button. Here's an example of how to create such a modal:
+In a Next.js application, you can use the DaisyUI Modal component to create a modal dialog with an input and a submit button. 
+  Here's an example of how to create such a modal:
 
 ```jsx
 import { useState } from 'react';
@@ -14,6 +15,7 @@ function MyComponent() {
     // Submit your data here...
     console.log(inputValue);
     closeModal();
+    setInputValue('')
   };
 
   return (
