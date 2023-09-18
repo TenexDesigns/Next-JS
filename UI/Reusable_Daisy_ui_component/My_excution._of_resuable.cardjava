@@ -1,0 +1,79 @@
+// components/ProductCard.js
+
+import React from 'react';
+
+const ProductCard = ({ imageUrl, title, description }) => {
+  return (
+    <div className="card w-auto mx-3 bg-base-100 shadow-xl">
+      <figure>
+        <img src={imageUrl} alt={title} className='h h-36 w-full object-cover' />
+      </figure>
+      <div className="card-body">
+        <h2 className="card-title text-xl md:text-2xl 2xl:text-4xl">{title}</h2>
+        <p className=' text-lg md:text-xl 2xl:text-2xl'>{description}</p>
+        <div className="card-actions justify-end l">
+          <button className="btn btn-primary text-lg md:text-xl 2xl:text-2xl">Buy Now</button>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default ProductCard;
+
+
+
+
+
+
+
+
+
+##########################################
+
+
+        <section className=''>
+           
+           <div className='mt my-12 mx-5 max-w-lg'>
+            <h1 className='b flex-wrap font-black text-3xl md:text-4xl 2xl:text-5xl'>Promoting your bussines and Services with Propel:</h1>
+
+<h2 className='text-xl  md:text-2xl 2xl:text-3xl font-extralight text-gray-600'> A resposnive , multipage bussines with everything you need to propel your bussines.</h2>
+           </div>
+
+
+           <div className=' mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 space-y-2 mx-4'>
+           <ProductCard imageUrl={'/img/sushi3.jpg'} title={'Sushi and bread'} description={' tuna) is a saltwater fish that belongs to the tribe Thunnini, a subgrouping of the Scombridae (mackerel) family. The Thunnini comprise 15 species across five genera'}/>
+           <ProductCard imageUrl={'/img/sushi2.jpg'} title={'Fish and Cream'} description={'The creator of modern sushi is believed to be Hanaya Yohei, who invented nigiri-zushi, a type of sushi most known today, in which seafood is placed on hand-pressed vinegared rice, around 1824'}/>
+           <ProductCard imageUrl={'/img/sushi1.jpg'} title={'Tuna and bread'} description={' Tilapia are mainly freshwater fish inhabiting shallow streams, ponds, rivers, and lakes, and less commonly found living in brackish water. '}/>
+           <ProductCard imageUrl={'/img/sushi3.jpg'} title={'Sushi and bread'} description={' tuna) is a saltwater fish that belongs to the tribe Thunnini, a subgrouping of the Scombridae (mackerel) family. The Thunnini comprise 15 species across five genera'}/>
+           <ProductCard imageUrl={'/img/sushi2.jpg'} title={'Fish and Cream'} description={'The creator of modern sushi is believed to be Hanaya Yohei, who invented nigiri-zushi, a type of sushi most known today, in which seafood is placed on hand-pressed vinegared rice, around 1824'}/>
+           <ProductCard imageUrl={'/img/sushi1.jpg'} title={'Tuna and bread'} description={' Tilapia are mainly freshwater fish inhabiting shallow streams, ponds, rivers, and lakes, and less commonly found living in brackish water. '}/>
+           
+
+           </div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
