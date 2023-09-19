@@ -2,7 +2,8 @@ To center the context within the section brackets in the code you provided, you 
 
 To use the `flex` utility class, you need to add it to the parent element of the content you want to center. In this case, the parent element is the `section` element.
 
-To use the `justify-center` utility class, you need to add it to the child element of the `section` element that contains the content you want to center. In this case, the child element is the `div` element that contains the carousel and the "Helloo Geore" text.
+To use the `justify-center` utility class, you need to add it to the child element of the `section` element that contains the content you want to center.
+  In this case, the child element is the `div` element that contains the carousel and the "Helloo Geore" text.
 
 Here is the updated code:
 
