@@ -59,8 +59,12 @@ const schema = yup.object().shape({
  age: yup.number().positive().integer().required(),
 });
 
+interface FormData {
+  name: string;
+  age: number;
+}
 function Form() {
- const { register, handleSubmit, formState: { errors } } = useForm({
+ const { register, handleSubmit, formState: { errors } } = useForm<FormData>({
    resolver: yupResolver(schema),
  });
 
