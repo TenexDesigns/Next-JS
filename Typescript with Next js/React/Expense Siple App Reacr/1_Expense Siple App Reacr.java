@@ -372,8 +372,64 @@ Remember, these suggestions are not strict rules but considerations to improve m
 
 
   
+The suggestion to "Use PropTypes or TypeScript for Type Checking" is related to ensuring that the types of props passed to your React components are as expected. There are two common tools for achieving this:
+----------------------------------------------------------------
 
+  The suggestion to "Use PropTypes or TypeScript for Type Checking" is related to ensuring that the types of props passed to your React components are as expected. There are two common tools for achieving this:
 
+1. **PropTypes:**
+   - PropTypes is a runtime type-checking library provided by React. It allows you to define the expected types for your component props and checks them during runtime.
+   - It's particularly useful for projects that are not using TypeScript but still want some level of type checking.
+   - PropTypes don't provide static type checking; errors are caught at runtime during development.
+
+   Example of PropTypes in your `ExpenseFilter.tsx`:
+
+   ```jsx
+   import PropTypes from 'prop-types';
+
+   interface Props {
+     onSelectCategory: (category: string) => void;
+   }
+
+   function ExpenseFilter({ onSelectCategory }: Props) {
+     // ...
+   }
+
+   ExpenseFilter.propTypes = {
+     onSelectCategory: PropTypes.func.isRequired,
+   };
+
+   export default ExpenseFilter;
+   ```
+
+2. **TypeScript:**
+   - TypeScript is a static type-checking tool that catches type errors during development.
+   - It provides compile-time type checking, which means errors are caught before the code is executed.
+   - You've already been using TypeScript, as seen in your code snippets.
+
+   Example of TypeScript in your `ExpenseFilter.tsx`:
+
+   ```tsx
+   interface Props {
+     onSelectCategory: (category: string) => void;
+   }
+
+   function ExpenseFilter({ onSelectCategory }: Props) {
+     // ...
+   }
+
+   export default ExpenseFilter;
+   ```
+
+   TypeScript provides static type checking without the need for PropTypes. However, if you're using TypeScript and PropTypes together, PropTypes can still be used for additional runtime checking in development.
+
+To use PropTypes, you need to install the `prop-types` package:
+
+```bash
+npm install prop-types
+```
+
+Then, you can import PropTypes and define prop types for your components, as shown in the example above. This helps catch potential errors during development, making your code more robust.
 
 
 
