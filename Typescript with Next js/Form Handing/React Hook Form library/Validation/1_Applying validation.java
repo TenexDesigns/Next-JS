@@ -68,8 +68,10 @@ export default Form2;
 
 EXPLANANTION
 --------------------------------------------------------------------------------------------------------------
+The issue with your code is in the way you're spreading the register function and the validation rules. The register function should be spread with the validation rules as its argument, not separately. Here's the corrected code:
 
 
+  
 The provided code is correct and effectively implements validation using React Hook Form. It defines a form component, registers form fields, applies validation rules, and handles validation errors. Here's a breakdown of the code:
 
 1. **Importing React and React Hook Form:**
