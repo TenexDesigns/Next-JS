@@ -15,6 +15,20 @@ Yup is a JavaScript schema builder for value parsing and validation. It allows y
 
 Here's an example of how you can use Yup with React Hook Form:
 
+1. **Ensure `yup` is installed:**
+
+   Make sure you have `yup` installed in your project. You can install it using:
+
+   ```bash
+   npm install yup
+   ```
+2. **Verify Resolvers Package:**
+
+   Ensure that you have the correct version of `@hookform/resolvers` installed:
+
+   ```bash
+   npm install @hookform/resolvers
+   ```
 ```jsx
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -59,6 +73,79 @@ For custom validations, you can use the `validate` property in the `register` fu
 In this example, the `validate` function checks if the field value is equal to 'customValue'. If it's not, it returns the error message 'Invalid value' [Source 23](https://www.carlrippon.com/custom-validation-rules-in-react-hook-form/).
                                                                                                                                                                     
                                                                                                                                                                     
+
                                                                                                                                                                     
+                                                                                                                                                                    
+                                                                                                                                                                    
+                                                                                                                                                                    
+                                                                                                                                                                    
+                                                                                                                                                                    
+                                                                                                                                                                    
+                                                                                                                                                                    
+                                                                                                                                                                    
+                                                                                                                                                                    
+                                                                                                                                                                    
+                                                                                                                                                 
+                                                                                                                                                                    
+                                                                                                                                                                    
+                                                                                                                                                                    
+                                                                                                                                                                    
+                                                                                                                                                                    
+                                                               ERRRORS ENCOUNTERS                                                                                                     
+       =-------------------------------------------------------                                                                                                                                                             
+                                                                                                                                                                    
+It looks like there might be an issue with the import path or the package might not be installed correctly. Let's troubleshoot this issue:
+
+1. **Ensure `yup` is installed:**
+
+   Make sure you have `yup` installed in your project. You can install it using:
+
+   ```bash
+   npm install yup
+   ```
+
+2. **Check Import Path:**
+
+   Make sure the import path for `yupResolver` is correct. It should be:
+
+   ```javascript
+   import { yupResolver } from '@hookform/resolvers/yup';
+   ```
+
+   Ensure that the path is spelled correctly, and the casing is accurate.
+
+3. **Check TypeScript Configuration (if using TypeScript):**
+
+   If you are using TypeScript, ensure that your `tsconfig.json` file includes the following:
+
+   ```json
+   {
+     "compilerOptions": {
+       "types": ["@types/node", "@types/react", "@types/react-dom"]
+     }
+   }
+   ```
+
+   This ensures that TypeScript recognizes the `@hookform` types.
+
+4. **Update Packages:**
+
+   Sometimes, issues like this can occur due to version mismatches. Try updating your packages to the latest versions:
+
+   ```bash
+   npm update
+   ```
+
+5. **Verify Resolvers Package:**
+
+   Ensure that you have the correct version of `@hookform/resolvers` installed:
+
+   ```bash
+   npm install @hookform/resolvers
+   ```
+
+   This package should be automatically installed as a dependency of `react-hook-form`, but verifying its presence can be helpful.
+
+After performing these steps, restart your development server and see if the issue persists. If the problem continues, please provide more details about your project structure, such as your folder structure and any relevant parts of your code where you are using `yupResolver`.
                                                                                                                                                                     
                                                                                                                                                                     ....
