@@ -1,6 +1,6 @@
 
 import React from "react";
-import { FieldValues, useForm } from "react-hook-form";
+import { FieldValues, useForm , isvalid } from "react-hook-form";
 
 interface FormData {
   name: string;
@@ -50,7 +50,7 @@ function Form2() {
           {errors.age?.type === "required" && <p>The age field is required</p>}
         </div>
 
-        <button type="submit" className="btn btn-primary">
+        <button disable={!isvalid} type="submit" className="btn btn-primary">
           Submit
         </button>
       </form>
