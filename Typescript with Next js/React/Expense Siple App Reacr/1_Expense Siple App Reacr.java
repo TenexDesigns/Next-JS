@@ -160,7 +160,6 @@ export default ExpenseList;
 FORM IN EXPENS
 -------------------------------------------------------------------------------
   
-
 import React from "react";
 import { FieldValues, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -168,7 +167,10 @@ import { z } from "zod";
 
 const schema = z.object({
   name: z.string().min(3, { message: "Name must be at least 3 characters" }),
-  age: z.number().positive({ message: "Age must be a positive number" }),
+  age: z
+    .string()
+    .min(1)
+    .regex(/^\d+$/, { message: "Age must be a positive number" }),
 });
 interface FormData {
   name: string;
@@ -232,11 +234,3 @@ function Form2() {
 }
 
 export default Form2;
-
-
-
-
-
-
-
-
