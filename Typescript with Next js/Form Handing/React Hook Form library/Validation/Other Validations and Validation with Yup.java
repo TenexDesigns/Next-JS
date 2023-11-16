@@ -9,10 +9,30 @@ React Hook Form supports a wide range of validations out of the box, including:
 - **Numeric Validation**: Validates that a field contains a numeric value.
 - **Custom Validations**: You can also define your own custom validation rules.
 
+
+   Built-in Validations:
+
+React Hook Form provides a variety of built-in validation methods, including:
+
+required: Ensures the field is not empty.
+minLength: Requires the field to have a minimum length.
+maxLength: Limits the field to a maximum length.
+pattern: Validates the field against a regular expression.
+validate: Allows you to define custom validation logic.
+
+You can also define your own custom validation functions using the validate prop of the register function. This allows you to implement any validation logic that you need beyond the built-in or Yup options.
+   
 In addition to these, React Hook Form also supports schema-based validation with libraries like Yup and Zod. A validation schema is a predefined set of rules that your form data must adhere to. If the data does not match the schema, the validation fails.
 
 Yup is a JavaScript schema builder for value parsing and validation. It allows you to create a schema that describes the shape of your data, and it can be used to validate that your data matches this schema. It supports a wide range of validations, including string, number, date, boolean, array, and object validations.
 
+   
+Yup and Schema Validations:
+
+Yup is a third-party validation library that provides more powerful and customizable validation rules. It allows you to define complex validation schemas for your forms. You can integrate Yup with React Hook Form to leverage its advanced validation capabilities.
+
+
+   
 Here's an example of how you can use Yup with React Hook Form:
 
 1. **Ensure `yup` is installed:**
