@@ -15,3 +15,6 @@ To keep components pure , keep chanages out of the render phases
 
 
   -React renders each component because of stric mode in development
+
+
+  React exutes effect after a render, and to make effect hook excute again, we can use a depency, which will recute the code in the useEffce hook if the depency chnages, the change can be caues by a change in satet of th depency
