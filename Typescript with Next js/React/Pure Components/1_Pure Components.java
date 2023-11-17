@@ -23,3 +23,36 @@ To keep components pure , keep chanages out of the render phases
 
   Code Clean up
   - In the clean up our functions should undo or stop what ever whas happening in the effect hook , e.g  timer, connection to server, if subscribing, our clean up should unsubscribe, if our effect is feching data from server , in clean up it should abort the fetch 
+
+
+
+
+
+
+promise - An object that holds the eventual result or failure of an asuncrous(or long running) operation
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
