@@ -64,11 +64,11 @@ class HttpService<T extends Entity> {
 
  update(entity: T) {
    return ApiClient.patch(`${this.endpoint}/${entity.id}`, entity);
+                            }}
 
 
 
-
-
+export default HttpService;
 
 
 
